@@ -75,35 +75,37 @@ export default () => {
           }
         />
       </LazyLoad>
-      <Features
-        heading={
-          <>
-            Amazing <HighlightedText>Services.</HighlightedText>
-          </>
-        }
-        cards={[
-          {
-            imageSrc: shopIconImageSrc,
-            title: '230+ Locations',
-            description: 'Lorem ipsum donor amet siti ceali placeholder text',
-            url: 'https://google.com',
-          },
-          {
-            imageSrc: chefIconImageSrc,
-            title: 'Professional Chefs',
-            description: 'Lorem ipsum donor amet siti ceali placeholder text',
-            url: 'https://timerse.com',
-          },
-          {
-            imageSrc: celebrationIconImageSrc,
-            title: 'Birthday Catering',
-            description: 'Lorem ipsum donor amet siti ceali placeholder text',
-            url: 'https://reddit.com',
-          },
-        ]}
-        imageContainerCss={tw`p-2!`}
-        imageCss={tw`w-20! h-20!`}
-      />
+      <LazyLoad>
+        <Features
+          heading={
+            <>
+              Amazing <HighlightedText>Services.</HighlightedText>
+            </>
+          }
+          cards={[
+            {
+              imageSrc: shopIconImageSrc,
+              title: '230+ Locations',
+              description: 'Lorem ipsum donor amet siti ceali placeholder text',
+              url: 'https://google.com',
+            },
+            {
+              imageSrc: chefIconImageSrc,
+              title: 'Professional Chefs',
+              description: 'Lorem ipsum donor amet siti ceali placeholder text',
+              url: 'https://timerse.com',
+            },
+            {
+              imageSrc: celebrationIconImageSrc,
+              title: 'Birthday Catering',
+              description: 'Lorem ipsum donor amet siti ceali placeholder text',
+              url: 'https://reddit.com',
+            },
+          ]}
+          imageContainerCss={tw`p-2!`}
+          imageCss={tw`w-20! h-20!`}
+        />
+      </LazyLoad>
       <MainFeature2
         subheading={<Subheading>A Reputed Brand</Subheading>}
         heading={
@@ -135,22 +137,26 @@ export default () => {
         imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
         textOnLeft={true}
       />
-      <Testimonial
-        subheading=""
-        heading={
-          <>
-            Customers <HighlightedText>Love Us.</HighlightedText>
-          </>
-        }
-      />
-      <DownloadApp
-        text={
-          <>
-            People around you are ordering delicious meals using the{' '}
-            <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
-          </>
-        }
-      />
+      <LazyLoad>
+        <Testimonial
+          subheading=""
+          heading={
+            <>
+              Customers <HighlightedText>Love Us.</HighlightedText>
+            </>
+          }
+        />
+      </LazyLoad>
+      <LazyLoad>
+        <DownloadApp
+          text={
+            <>
+              People around you are ordering delicious meals using the{' '}
+              <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
+            </>
+          }
+        />
+      </LazyLoad>
       <Footer />
     </>
   );
